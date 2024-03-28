@@ -1,54 +1,28 @@
-# Astro Starter Kit: Basics
+# Portafolio de Agustin Perea
 
-```sh
-npm create astro@latest -- --template basics
-```
+El portafolio estará hecho con Astro y con tailwind.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+La pagina Fontsource para usar la fuente static de Onest.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Algunos componentes los saqué de Flowbite.com
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Use la pagina bg.ibelick.com para algun fondo
 
-## 🚀 Project Structure
+svgl.vercel.app y tabler-icons.io para importar unos iconos y svgomg.net para agregarle la viewBox.
 
-Inside of your Astro project, you'll see the following folders and files:
+Para manejar estados de react en astro, utilizo el nanostores y @nanostores/react.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Cada informacion de los proyectos y sus imagenes son puestas en la pagina a traves de listas, así que se pueden editar simplemente yendo al array de `Proyectos.astro` y modificarlos.
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+##Todos los comandos utilizados:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command                                    | Action                                        |
+| :------------------------                  | :---------------------------------------------|
+| `npm create astro@latest `                 | Crear proyecto Astro                          |
+| `npm run dev`                              | Starts local dev server `localhost:4321`      |
+| `npm install @‌fontsource/onest.`           | Fuente de FontSource                          |
+| `npm install nanostores @nanostores/react` | nanostores                                    |
