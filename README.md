@@ -1,9 +1,6 @@
 # Portafolio de Agustin Perea
 
-![image](https://github.com/AgustinP05/agustinp05.github.io/assets/109115888/7b59dabf-9afc-40c6-a7f4-b0a19ba0fb8e)
-
-
-![image](https://github.com/AgustinP05/agustinp05.github.io/assets/109115888/8cfbdd9d-1dd3-4463-8e8b-25277e8432c4)
+![image](https://github.com/AgustinP05/agustinp05.github.io/assets/109115888/7b59dabf-9afc-40c6-a7f4-b0a19ba0fb8e) ![image](https://github.com/AgustinP05/agustinp05.github.io/assets/109115888/8cfbdd9d-1dd3-4463-8e8b-25277e8432c4)
 
 
 El portafolio estará hecho con Astro y con tailwind.
