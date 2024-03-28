@@ -1,0 +1,26 @@
+---
+
+import TechList from "./TechList.astro"
+import Button from './Button.jsx'
+
+
+const {title, image, imageHeight} = Astro.props
+
+
+////////////////////////
+//1:18:00
+
+---
+
+<Button id=`${title}`{...Astro.props} client:load>
+   
+        <h1 class="text-2xl mb-4 ml-6 font-bold">{title}</h1>
+        <div class={`z-20 h-[${imageHeight}px] relative flex items-center sm:block`}> <!-- h-[210px] En el h se pondrá la altura de la imagen -->
+            <img src={image} alt={title} class=" w-full h-[75%] sm:h-full rounded-2xl absolute group-hover:lg:-translate-y-12 transition">
+            <span class="invisible md:visible"><TechList {...Astro.props}/></span>
+        </div>
+        <span class="lg:hidden">
+            <TechList {...Astro.props}/>
+        </span>
+        
+</Button>

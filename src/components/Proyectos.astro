@@ -1,0 +1,56 @@
+---
+
+import ProjectIcon from "./Icons/ProjectIcon.astro"
+import ProjectCard from "./ProjectComponents/ProjectCard.astro"
+
+
+export const projectItems=[
+    {
+        title:"DaleQueValen",
+        image:"/footalentlogo.jpg",
+        imageHeight:"210",
+        image2:"/dalequevalen.jpg",
+        technologies:["Next","React","Javascript","Tailwind",],
+        link:"https://www.dalequevalen.com/",
+        //github:"",//No disponible
+        texto:"DaleQueValen es una fundación, sin fines de lucro, cuyo principal propósito es encontrar y ofrecer soluciones a niños y niñas con parálisis cerebral.",
+        texto2:"En este proyecto, he sido convocado por Footalent para trabajar como desarrollador Frontend junto a un gran equipo de diseñadores y programadores.",
+        texto3:"Gracias a nuestro esfuerzo, hemos podido entregar la página web en menos de 2 meses. Fue una muy linda experiencia.",
+       
+    }
+    // ,
+    // {
+    //     title:"GameTrade",
+    //     image:"/footalentlogo.jpg",
+    //     imageHeight:"210",
+    //     image2:"/dalequevalen.jpg",
+    //     technologies:["Next","React","Tailwind","Node","Express","MongoDB", "Jest",],
+    //     link:"WWW.google.com",
+    //     github:"WWW.github.com",
+    //     texto:'Ecommerce ficticio hecho para practicar varias tecnologías y aprender cosas que nunca habia visto.',
+    //     texto2:"Subí la coleccion de la BD utilizada a internet gracias a Atlas. He hecho un sistema de usuario y contraseña cifrada para una ruta solo administrador.",
+    //     texto3:"Con respecto al backend, descubrí lo que es el error de CORS al utilizar Axios para conectar la base de datos al Frontend. Ademas, en este proyecto fue la primera vez que he experimentado testing para dejar el sistema mas seguro.",
+       
+    // },
+    
+]
+---
+
+<section id="proyectos" class="flex-col justify-center content-center">
+    <h1 class="text-xl sm:text-3xl justify-center lg:text-4xl lg:justify-normal font-bold mb-6 flex items-center"> <ProjectIcon /> Proyectos</h1>
+    <p class="text-base sm:text-lg lg:text-xl opacity-70 mb-20">Esta página portfolio fue creada con Astro y Tailwind. Aquí muestro algunos proyectos en los que he participado o creado.
+        Cada proyecto está acompañado de una breve descripción que destaca las tecnologías utilizadas, el desafío abordado y los resultados obtenidos. Espero que encuentres inspiración y disfrutes explorando mi trabajo.
+        <br>
+        <small class="text-sm sm:text-base">*Los proyectos que no redirijan al código fuente no son de mi propiedad.</small> 
+    </p>
+
+    <div class=" flex flex-col items-center">
+        {
+            projectItems.map((project)=>{
+                return <ProjectCard {...project}  client:load/>
+            })
+        }   
+    </div>
+        
+
+</section>
