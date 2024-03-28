@@ -1,8 +1,10 @@
+import {useStore} from '@nanostores/react'
 import {modalClicked} from './modalStore'
 
 export default function Button(props){
 
-  
+    const $modalClicked = useStore(modalClicked)//Traemos el valor actual del estado
+    
 
    return <div className='w-[100%] sm:w-[80%] lg:w-[66.6%] 2xl:w-6/12 mb-16'><div onClick={()=>{
     const id =props.id
@@ -17,7 +19,7 @@ export default function Button(props){
                 <img src={props.image2} alt={props.title} className="rounded-lg"/>
             </div>
             <div className="relative lg:w-[50%] h-full p-1 sm:p-5 sm:px-0 2xl:px-5 flex flex-col">
-                <button className='sticky top-1 sm:absolute sm:top-0 sm:right-0' onClick={()=>{modalClicked.set('')}}><svg xmlns="http://www.w3.org/2000/svg" className="text-indigo-500 rounded-full hover:text-indigo-100 hover:bg-indigo-300 transition icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg></button>
+                <button className='sticky top-1 sm:absolute sm:top-0 sm:right-0' onClick={()=>{$modalClicked.set('')}}><svg xmlns="http://www.w3.org/2000/svg" className="text-indigo-500 rounded-full hover:text-indigo-100 hover:bg-indigo-300 transition icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg></button>
                 <h1 className="text-2xl sm:text-3xl text-center lg:text-start mb-2 lg:mb-4 sm:ml-6 font-bold">{props.title}</h1>
                
                 <div className="cardScroll h-full flex flex-col justify-between  text-sm sm:text-base sm:px-4 lg:px-auto  sm:overflow-y-auto ">
