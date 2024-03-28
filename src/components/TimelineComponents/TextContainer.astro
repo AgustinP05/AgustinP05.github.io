@@ -1,0 +1,21 @@
+---
+const { title, date, description, image, link } = Astro.props;
+---
+
+<div {...Astro.props} class="flex justify-between ml-4z-10 font-medium mb-16 items-center">
+    
+    
+    
+    <div class="text-base order-1 space-y-2 backdrop-blur-sm bg-gray-800/50 rounded-lg shadow-only lg:w-5/12 px-6 py-4">
+        <h3 class="mb-3 font-bold text-white text-xl lg:text-2xl">{title}</h3>
+        <p class="pb-4 lg:text-sm text-gray-100">{date}</p>
+        <hr />
+        <p class="lg:text-sm font-medium leading-snug tracking-wide text-gray-300 text-opacity-100">{description}</p>
+    </div>
+    <div class="hidden lg:flex order-2 bg-sky-200 z-10 rounded-full border-4 border-black  h-8 w-8 absolute  left-1/2 transform -translate-x-[17.5px]"/>
+    
+
+    <a href=`${link}` target="_blank" rel="noopener noreferrer" class="hidden lg:flex order-3 overflow-hidden rounded-lg  lg:w-[40%] h-full hover:translate-x-9 transition">
+        <img src=`${image}` alt=`${title}` class="object-fill" >
+    </a>
+</div>

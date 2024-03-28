@@ -1,0 +1,44 @@
+---
+import type { Code, Debug } from 'astro:components';
+import TextContainer from './TimelineComponents/TextContainer.astro'
+
+const timelineItems=[
+    {
+        title:"Tecnicatura desarrollo de Software UPE",
+        date:"2024 - Actualidad",
+        description:"En mi búsqueda de adentrarme mas al mundo de software, he optado por hacer esta tecnicatura en la UPE que tiene una duración de 3 años.",
+        image:"../../public/upelogo.jpg",
+        link:"https://web.upe.edu.ar/tecnicatura-en-desarrollo-de-software/"
+    },
+    {
+        title:"Footalent - DaleQueValen ( pasantía )",
+        date:"Agosto 2023 - Octubre 2023",
+        description:"Junto a un equipo de desarrollo, diseño y marketing, hicimos una página web para la fundación DaleQueValen. Estoy feliz por haber trabajado como Frontend con tan buen equipo formado gracias a Footalent, que es la empresa sin fines de lucro que nos convocó para colaborar y aprender de la experiencia.",
+        image:"../../public/footalentlogo.jpg",
+        link:'https://www.linkedin.com/in/footalent/'
+    },
+    {
+        title:"Digital Bluee ( curso Fullstack )",
+        date:"Diciembre 2022 - Agosto 2023",
+        description:"En este curso he profundizado en muchas tecnologías, desde HTML, CSS y JS, hasta librerías como Bootstrap y React. Además de dar mis primeros pasos en Backend con Node y Express utilizando MongoDB.",
+        image:"../../public/digitalblueelogo.jpg",
+        link:"https://digitalbluee.com/?utm_source=DigitalBluee&utm_campaign=e0d23bfa47-EMAIL_CAMPAIGN_7_2_2021_9_56_COPY_45&utm_medium=email&utm_term=0_92891b9c10-e0d23bfa47-486610226"
+    },
+    {
+        title:"Alura Latam ( curso )",
+        date:"Julio 2022 - Enero 2023",
+        description:"Aquí he dado mis primeros pasos en la programación. Aprendí lo básico de HTML, CSS y JS. También Java, conectando una base de datos MySQL a un CRUD. Y Git para subir los proyectos a GitHub.",
+        image:"../../public/aluralogo.jpg",
+        link:"https://www.aluracursos.com/?gad_source=1&gclid=CjwKCAiA-vOsBhAAEiwAIWR0TZ-8MvwZddlJfvTvGURtDInw8_G0qa5hsEPAwhaU0tnaKdUhZL2omBoCww8QAvD_BwE"
+    }
+];
+---
+<div class="relative h-full">
+    <div class="w-1 h-full bg-slate-400/80 absolute right-[50%] -translate-y-16"/>
+    
+    {
+        timelineItems.map(item =>{
+          return  <TextContainer {...item}/>
+        })
+    }
+</div>
