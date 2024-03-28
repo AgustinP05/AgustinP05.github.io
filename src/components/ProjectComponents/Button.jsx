@@ -1,11 +1,8 @@
-// import {useStore} from '@nanostores/react'
-import {useStore} from '@nanostores/react'
 import {modalClicked} from './modalStore'
 
 export default function Button(props){
 
-    const $modalClicked = useStore(modalClicked)//Traemos el valor actual del estado
-    
+  
 
    return <div className='w-[100%] sm:w-[80%] lg:w-[66.6%] 2xl:w-6/12 mb-16'><div onClick={()=>{
     const id =props.id
