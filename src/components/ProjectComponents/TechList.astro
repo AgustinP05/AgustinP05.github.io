@@ -1,0 +1,39 @@
+---
+import TailwindIcon from "../Icons/TailwindIcon.astro"
+import ReactIcon from "../Icons/ReactIcon.astro"
+import NextIcon from "../Icons/NextIcon.astro"
+import JsIcon from "../Icons/JsIcon.astro"
+import NodeIcon from "../Icons/NodeIcon.astro"
+import ExpressIcon from "../Icons/ExpressIcon.astro"
+import MongoIcon from "../Icons/MongoIcon.astro"
+import JestIcon from "../Icons/JestIcon.astro"
+
+
+import Pill from "../Pill.astro"
+
+const {technologies} = Astro.props
+
+const techList={
+    "Next":NextIcon,
+    "Tailwind":TailwindIcon,
+    "React":ReactIcon,
+    "Javascript":JsIcon,
+    "Node":NodeIcon,
+    "Express":ExpressIcon,
+    "MongoDB":MongoIcon,
+    "Jest":JestIcon
+}
+//Si quiero mas logos puedo ir a las paginas https://svgl.vercel.app/ y https://tabler.io/icons
+---
+
+<ol class=`flex items-end -z-10 h-full p-2 relative bg-slate-300/0 rounded-2xl  group-hover:bg-slate-300/10 ${technologies.length>4?'group-hover:lg:translate-y-12':''} transition`>
+    <!-- <div class=`w-full flex ${technologies.length>4?'flex-wrap gap-y-3 gap-x-2':'flex-wrap sm:flex-nowrap'} justify-evenly`> -->
+    <div class=`w-full flex flex-wrap gap-y-3 ${technologies.length>4?'':'sm:flex-nowrap'} justify-evenly`>
+        {
+            technologies.map((tech:string)=>{
+                const TechIcon = techList[tech]
+                return TechIcon ? <Pill style={{background:"transparent",color:"white",border:"1px solid #a5b4fc"}}><TechIcon/>{tech}</Pill>:null
+            })
+           }
+    </div>
+ </ol>
